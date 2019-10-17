@@ -7,7 +7,9 @@ import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 
-import { Container } from "../components/Container";
+import { Container } from "../../components/Container";
+
+import "./index.scss";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -44,7 +46,7 @@ export const About = () => {
           <Fade right>
             <Paper className={classes.root}>
               <Typography variant="h5" component="h3">
-                Высококвалифицированный специалисты
+                Высококва лифицированный специалисты
               </Typography>
               <Typography component="p">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa,

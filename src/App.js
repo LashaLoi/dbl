@@ -2,16 +2,17 @@ import React from "react";
 
 import { useModal } from "./hooks/useModal";
 
-import { Title } from "./modules/Title";
-import { Header } from "./modules/Header";
-import { Amenities } from "./modules/Amenities";
-import { About } from "./modules/About";
-import { Galery } from "./modules/Galery";
-import { Footer } from "./modules/Footer";
+import {
+  Title,
+  Header,
+  Amenities,
+  About,
+  Galery,
+  Footer,
+  Sidebar
+} from "./modules";
 
-import Sidebar from "./modules/Sidebar";
-
-const App = () => {
+export const App = () => {
   const { open, handleOpen, handleClose } = useModal();
 
   return (
@@ -26,5 +27,3 @@ const App = () => {
     </>
   );
 };
-
-export default App;

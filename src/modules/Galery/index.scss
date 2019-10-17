@@ -1,0 +1,21 @@
+.calery {
+  height: 80%;
+  width: 90%;
+
+  @media (max-width: 700px) {
+    margin-top: 500px;
+  }
+
+  &-container {
+    height: 80vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 50px;
+
+    @media (max-width: 700px) {
+      width: 100%;
+      padding: 0;
+    }
+  }
+}

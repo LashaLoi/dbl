@@ -2,9 +2,11 @@ import React from "react";
 
 import Fade from "react-reveal/Fade";
 
-import { Container } from "../components/Container";
+import { Container } from "../../components/Container";
 
-import { Logo } from "./Logo";
+import { Logo } from "../Logo/";
+
+import "./index.scss";
 
 export const Amenities = () => (
   <Container>

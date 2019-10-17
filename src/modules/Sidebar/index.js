@@ -70,7 +70,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const Sidebar = ({ open, setClose }) => {
+export const Sidebar = ({ open, setClose }) => {
   const classes = useStyles();
 
   return (
@@ -118,5 +118,3 @@ const Sidebar = ({ open, setClose }) => {
     </Drawer>
   );
 };
-
-export default Sidebar;

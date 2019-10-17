@@ -4,9 +4,11 @@ import Fade from "react-reveal/Fade";
 
 import { Parallax } from "react-parallax";
 
-import { Container } from "../components/Container";
+import { Container } from "../../components/Container";
 
-import { Logo } from "./Logo";
+import { Logo } from "../Logo/";
+
+import "./index.scss";
 
 const image1 =
   "https://cepia.ru/images/u/pages/10-let-kakaya-svadba-cover-298.jpg";

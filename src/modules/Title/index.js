@@ -11,7 +11,9 @@ import Link from "@material-ui/core/Link";
 import MenuIcon from "@material-ui/icons/Menu";
 import IconButton from "@material-ui/core/IconButton";
 
-import { Logo } from "./Logo";
+import { Logo } from "../Logo/";
+
+import "./index.scss";
 
 const useStyles = makeStyles(theme => ({
   root: {

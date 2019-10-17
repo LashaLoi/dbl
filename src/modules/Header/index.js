@@ -4,7 +4,9 @@ import { Parallax } from "react-parallax";
 
 import Fade from "react-reveal/Fade";
 
-import { ReactComponent as Img } from "../assets/images/arrow_downward-24px.svg";
+import { ReactComponent as Img } from "../../assets/images/arrow_downward-24px.svg";
+
+import "./index.scss";
 
 const image1 =
   "https://cepia.ru/images/u/pages/10-let-kakaya-svadba-cover-298.jpg";

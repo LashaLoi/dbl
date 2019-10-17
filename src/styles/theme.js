@@ -11,5 +11,3 @@ export default createMuiTheme({
     }
   }
 });
-
-//#f4f0e3

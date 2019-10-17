@@ -1,7 +1,7 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { render } from "react-dom";
 
-import App from "./App";
+import { App } from "./App";
 
 import theme from "./styles/theme";
 import { ThemeProvider } from "@material-ui/styles";
@@ -14,4 +14,4 @@ const root = (
   </ThemeProvider>
 );
 
-ReactDOM.render(root, document.getElementById("root"));
+render(root, document.getElementById("root"));
