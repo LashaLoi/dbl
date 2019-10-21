@@ -2,12 +2,16 @@ import React from "react";
 
 import Fade from "react-reveal/Fade";
 
+import scroll from "react-scroll";
+
+import { ReactComponent as Img } from "../../../assets/images/arrow_downward-black.svg";
+
 import { makeStyles } from "@material-ui/core/styles";
 
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 
-import { Container } from "../../components/Container";
+import { Container } from "../../../components/Container";
 
 import "./index.scss";
 
@@ -70,6 +74,13 @@ export const About = () => {
               </Typography>
             </Paper>
           </Fade>
+        </div>
+        <div className="arrow">
+          <Img
+            onClick={() =>
+              scroll.animateScroll.scrollTo(window.innerHeight * 3 - 50)
+            }
+          />
         </div>
       </div>
     </Container>

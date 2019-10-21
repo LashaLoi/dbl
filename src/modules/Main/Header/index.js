@@ -2,9 +2,11 @@ import React from "react";
 
 import { Parallax } from "react-parallax";
 
+import scroll from "react-scroll";
+
 import Fade from "react-reveal/Fade";
 
-import { ReactComponent as Img } from "../../assets/images/arrow_downward-24px.svg";
+import { ReactComponent as Img } from "../../../assets/images/arrow_downward-24px.svg";
 
 import "./index.scss";
 
@@ -16,7 +18,12 @@ export const Header = () => (
     <div className="header">
       <div className="header-container">
         <Fade>
-          <div className="">Создаем незабываемые впечатления</div> <Img />
+          <div className="">Создаем незабываемые впечатления</div>{" "}
+          <Img
+            onClick={() =>
+              scroll.animateScroll.scrollTo(window.innerHeight - 50)
+            }
+          />
         </Fade>
       </div>
     </div>

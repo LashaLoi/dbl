@@ -1,5 +1,7 @@
 import React from "react";
 
+import { navigate } from "@reach/router";
+
 import { useMediaQuery } from "react-responsive";
 
 import { makeStyles } from "@material-ui/core/styles";
@@ -51,8 +53,12 @@ export const Title = ({ setOpen }) => {
             </IconButton>
           ) : (
             <div className="title-container">
-              <Link color="inherit">Главная</Link>
-              <Link color="inherit">Услуги</Link>
+              <Link color="inherit" onClick={() => navigate("/")}>
+                Главная
+              </Link>
+              <Link color="inherit" onClick={() => navigate("/amenities")}>
+                Услуги
+              </Link>
               <Link color="inherit">О нас</Link>
               <Link color="inherit">Галерея</Link>
               <Link color="inherit">Связаться</Link>

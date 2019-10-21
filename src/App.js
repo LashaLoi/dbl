@@ -2,15 +2,9 @@ import React from "react";
 
 import { useModal } from "./hooks/useModal";
 
-import {
-  Title,
-  Header,
-  Amenities,
-  About,
-  Galery,
-  Footer,
-  Sidebar
-} from "./modules";
+import { Router } from "./router/index";
+
+import { Title, Footer, Sidebar } from "./modules";
 
 export const App = () => {
   const { open, handleOpen, handleClose } = useModal();
@@ -19,10 +13,7 @@ export const App = () => {
     <>
       <Title setOpen={handleOpen} />
       <Sidebar open={open} setClose={handleClose} />
-      <Header />
-      <Amenities />
-      <About />
-      <Galery />
+      <Router />
       <Footer />
     </>
   );
