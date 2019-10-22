@@ -5,3 +5,4 @@ export { Footer } from "./Footer";
 export { Main } from "./Main";
 export { Amenities } from "./Amenities";
 export { About } from "./About";
+export { Galery } from "./Galery";

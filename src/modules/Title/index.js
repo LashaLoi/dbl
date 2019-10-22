@@ -62,7 +62,9 @@ export const Title = ({ setOpen }) => {
               <Link color="inherit" onClick={() => navigate("/about")}>
                 О нас
               </Link>
-              <Link color="inherit">Галерея</Link>
+              <Link color="inherit" onClick={() => navigate("/galery")}>
+                Галерея
+              </Link>
             </div>
           )}
         </Toolbar>
