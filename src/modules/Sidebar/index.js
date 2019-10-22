@@ -1,120 +1,78 @@
 import React from "react";
 
-import { makeStyles } from "@material-ui/core/styles";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
-import ListItemText from "@material-ui/core/ListItemText";
-import ListAlt from "@material-ui/icons/ListAlt";
-import HomeIcon from "@material-ui/icons/Home";
-import PeopleIcon from "@material-ui/icons/People";
-import ImportContactsIcon from "@material-ui/icons/ImportContacts";
-import PhoneIcon from "@material-ui/icons/Phone";
-import Drawer from "@material-ui/core/Drawer";
+import { navigate } from "@reach/router";
 
-const drawerWidth = 240;
+import Dialog from "@material-ui/core/Dialog";
+import ListItemText from "@material-ui/core/ListItemText";
+import ListItem from "@material-ui/core/ListItem";
+import List from "@material-ui/core/List";
+import Divider from "@material-ui/core/Divider";
+import AppBar from "@material-ui/core/AppBar";
+import Toolbar from "@material-ui/core/Toolbar";
+import IconButton from "@material-ui/core/IconButton";
+import Typography from "@material-ui/core/Typography";
+import CloseIcon from "@material-ui/icons/Close";
+import Slide from "@material-ui/core/Slide";
+
+import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles(theme => ({
-  root: {
-    display: "flex"
-  },
   appBar: {
-    transition: theme.transitions.create(["margin", "width"], {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen
-    })
+    position: "relative",
+    color: "#fff"
   },
-  appBarShift: {
-    width: `calc(100% - ${drawerWidth}px)`,
-    marginLeft: drawerWidth,
-    transition: theme.transitions.create(["margin", "width"], {
-      easing: theme.transitions.easing.easeOut,
-      duration: theme.transitions.duration.enteringScreen
-    })
-  },
-  menuButton: {
-    marginRight: theme.spacing(2)
-  },
-  hide: {
-    display: "none"
-  },
-  drawer: {
-    width: drawerWidth,
-    flexShrink: 0
-  },
-  drawerPaper: {
-    width: drawerWidth
-  },
-  drawerHeader: {
-    display: "flex",
-    alignItems: "center",
-    padding: theme.spacing(0, 1),
-    ...theme.mixins.toolbar,
-    justifyContent: "flex-end"
-  },
-  content: {
-    flexGrow: 1,
-    padding: theme.spacing(3),
-    transition: theme.transitions.create("margin", {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen
-    }),
-    marginLeft: -drawerWidth
-  },
-  contentShift: {
-    transition: theme.transitions.create("margin", {
-      easing: theme.transitions.easing.easeOut,
-      duration: theme.transitions.duration.enteringScreen
-    }),
-    marginLeft: 0
+  title: {
+    marginLeft: theme.spacing(3),
+    flex: 1
   }
 }));
+
+const links = [
+  { id: 11, name: "Главная", link: () => navigate("/") },
+  { id: 21, name: "Услуги", link: () => navigate("/amenities") },
+  { id: 31, name: "О нас", link: () => navigate("/about") },
+  { id: 41, name: "Галерея", link: () => navigate("/galery") }
+];
+
+const Transition = React.forwardRef((props, ref) => (
+  <Slide direction="up" ref={ref} {...props} />
+));
 
 export const Sidebar = ({ open, setClose }) => {
   const classes = useStyles();
 
   return (
-    <Drawer
-      className={classes.drawer}
-      anchor="left"
+    <Dialog
+      fullScreen
       open={open}
       onClose={setClose}
-      classes={{
-        paper: classes.drawerPaper
-      }}
+      TransitionComponent={Transition}
     >
+      <AppBar className={classes.appBar}>
+        <Toolbar>
+          <IconButton
+            edge="start"
+            color="inherit"
+            onClick={setClose}
+            aria-label="close"
+          >
+            <CloseIcon />
+          </IconButton>
+          <Typography variant="h6" className={classes.title}>
+            DBL
+          </Typography>
+        </Toolbar>
+      </AppBar>
       <List>
-        <ListItem button onClick={setClose}>
-          <ListItemIcon>
-            <HomeIcon />
-          </ListItemIcon>
-          <ListItemText primary="Главная" />
-        </ListItem>
-        <ListItem button onClick={setClose}>
-          <ListItemIcon>
-            <ListAlt />
-          </ListItemIcon>
-          <ListItemText primary="Услуги" />
-        </ListItem>
-        <ListItem button onClick={setClose}>
-          <ListItemIcon>
-            <PeopleIcon />
-          </ListItemIcon>
-          <ListItemText primary="О нас" />
-        </ListItem>
-        <ListItem button onClick={setClose}>
-          <ListItemIcon>
-            <ImportContactsIcon />
-          </ListItemIcon>
-          <ListItemText primary="Галерея" />
-        </ListItem>
-        <ListItem button onClick={setClose}>
-          <ListItemIcon>
-            <PhoneIcon />
-          </ListItemIcon>
-          <ListItemText primary="Связаться" />
-        </ListItem>
+        {links.map(({ id, name, link }) => (
+          <>
+            <ListItem key={id} button onClick={setClose}>
+              <ListItemText primary={name} onClick={link} />
+            </ListItem>
+            <Divider />
+          </>
+        ))}
       </List>
-    </Drawer>
+    </Dialog>
   );
 };
