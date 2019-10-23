@@ -32,6 +32,9 @@ const useStyles = makeStyles(theme => ({
   },
   appBar: {
     background: "#fff"
+  },
+  link: {
+    cursor: "pointer"
   }
 }));
 
@@ -53,17 +56,40 @@ export const Title = ({ setOpen }) => {
             </IconButton>
           ) : (
             <div className="title-container">
-              <Link color="inherit" onClick={() => navigate("/")}>
+              <Link
+                className={classes.link}
+                color="inherit"
+                onClick={() => navigate("/")}
+              >
                 Главная
               </Link>
-              <Link color="inherit" onClick={() => navigate("/amenities")}>
+              <Link
+                className={classes.link}
+                color="inherit"
+                onClick={() => navigate("/amenities")}
+              >
                 Услуги
               </Link>
-              <Link color="inherit" onClick={() => navigate("/about")}>
+              <Link
+                className={classes.link}
+                color="inherit"
+                onClick={() => navigate("/about")}
+              >
                 О нас
               </Link>
-              <Link color="inherit" onClick={() => navigate("/galery")}>
+              <Link
+                className={classes.link}
+                color="inherit"
+                onClick={() => navigate("/galery")}
+              >
                 Галерея
+              </Link>
+              <Link
+                className={classes.link}
+                color="inherit"
+                onClick={() => navigate("/contacts")}
+              >
+                Контакты
               </Link>
             </div>
           )}

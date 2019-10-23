@@ -31,7 +31,8 @@ const links = [
   { id: 11, name: "Главная", link: () => navigate("/") },
   { id: 21, name: "Услуги", link: () => navigate("/amenities") },
   { id: 31, name: "О нас", link: () => navigate("/about") },
-  { id: 41, name: "Галерея", link: () => navigate("/galery") }
+  { id: 41, name: "Галерея", link: () => navigate("/galery") },
+  { id: 234, name: "Контакты", link: () => navigate("/contact") }
 ];
 
 const Transition = React.forwardRef((props, ref) => (
@@ -66,6 +67,7 @@ export const Sidebar = ({ open, setClose }) => {
       <List>
         {links.map(({ id, name, link }) => (
           <>
+            <Divider />
             <ListItem key={id} button onClick={setClose}>
               <ListItemText primary={name} onClick={link} />
             </ListItem>

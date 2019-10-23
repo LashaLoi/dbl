@@ -33,14 +33,14 @@ export const Amenities = () => (
           </div>
         </div>
         <div className="image"></div>
-        <div className="arrow">
-          <Img
-            onClick={() =>
-              scroll.animateScroll.scrollTo(window.innerHeight * 2 + 20)
-            }
-          />
-        </div>
       </div>
     </Fade>
+    <div className="arrow-bottom">
+      <Img
+        onClick={() =>
+          scroll.animateScroll.scrollTo(window.innerHeight * 2 + 20)
+        }
+      />
+    </div>
   </Container>
 );
