@@ -1,0 +1,42 @@
+.desc-container {
+  background: #fbfbfb;
+  width: 90%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 850px) {
+    margin-top: -200px;
+  }
+
+  &-title {
+    font-size: 3rem;
+    @media (max-width: 850px) {
+      margin-bottom: 30px;
+
+      font-size: 2rem;
+    }
+  }
+
+  &-desc {
+    font-size: 1.5rem;
+
+    @media (max-width: 850px) {
+      font-size: 1rem;
+    }
+  }
+
+  &-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80%;
+    width: 80%;
+    flex-direction: column;
+
+    @media (max-width: 850px) {
+      height: 100%;
+    }
+  }
+}
