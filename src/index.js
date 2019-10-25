@@ -14,4 +14,6 @@ const root = (
   </ThemeProvider>
 );
 
+console.log(1);
+
 render(root, document.getElementById("root"));
