@@ -7,3 +7,4 @@ export { Amenities } from "./Amenities";
 export { About } from "./About";
 export { Galery } from "./Galery";
 export { GaleryAbout } from "./GaleryAbout";
+export { Contact } from "./Contact";

@@ -3,86 +3,71 @@ import React from "react";
 import Fade from "react-reveal/Fade";
 
 import scroll from "react-scroll";
+import SliderComponent from "react-animated-slider";
+import "react-animated-slider/build/horizontal.css";
 
 import { ReactComponent as Img } from "../../../assets/images/arrow_downward-black.svg";
-
-import { makeStyles } from "@material-ui/core/styles";
-
-import Paper from "@material-ui/core/Paper";
-import Typography from "@material-ui/core/Typography";
 
 import { Container } from "../../../components/Container";
 
 import "./index.scss";
 
-const useStyles = makeStyles(theme => ({
-  root: {
-    padding: theme.spacing(3, 2),
-    maxWidth: 500
+const data = [
+  {
+    id: Date.now() + Math.random(1000000),
+    who: "Irina loi",
+    message:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio perspiciatis laudantium quam commodi voluptatum quasi numquam laboriosam, aut sint quas?"
+  },
+  {
+    id: Date.now() + Math.random(1000000),
+    who: "Aliaksei loi",
+    message:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio perspiciatis laudantium quam commodi voluptatum quasi numquam laboriosam, aut sint quas? adipisicing elit. Optio perspiciatis laudantium quam commodi voluptatum quasi numquam laboriosam, aut sint quas?"
+  },
+  {
+    id: Date.now() + Math.random(1000000),
+    who: "Sasha Loi",
+    message:
+      "adipisicing elit. Optio perspiciatis laudantium quam commodi voluptatum quasi numquam laboriosam, aut sint quas?"
   }
-}));
+];
 
 export const About = () => {
-  const classes = useStyles();
-
   return (
-    <Container>
-      <div className="about">
-        <Fade>
-          <div className="about-container center title">О нас</div>
-        </Fade>
-        <div className="about-container left">
-          <Fade left>
-            <Paper className={classes.root}>
-              <Typography variant="h5" component="h3">
-                Надежность
-              </Typography>
-              <Typography component="p">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. A
-                nesciunt ipsa distinctio omnis autem quaerat iure pariatur
-                dolores voluptatem? Ab consectetur est sequi tempore asperiores
-                nisi nobis sint eligendi voluptatum.
-              </Typography>
-            </Paper>
-          </Fade>
-        </div>
-        <div className="about-container right">
-          <Fade right>
-            <Paper className={classes.root}>
-              <Typography variant="h5" component="h3">
-                Высококва лифицированный специалисты
-              </Typography>
-              <Typography component="p">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
-                blanditiis. Lorem ipsum dolor, sit amet consectetur adipisicing
-                elit. Eos quaerat corporis labore provident cumque possimus.
-              </Typography>
-            </Paper>
-          </Fade>
-        </div>
-        <div className="about-container left">
-          <Fade left>
-            <Paper className={classes.root}>
-              <Typography variant="h5" component="h3">
-                Большой опыт работы
-              </Typography>
-              <Typography component="p">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit
-                consequatur, quod minima fuga architecto modi reprehenderit
-                soluta cum possimus quis aliquam sit ea nostrum, quae hic cumque
-                qui sint unde?
-              </Typography>
-            </Paper>
-          </Fade>
-        </div>
-        <div className="arrow">
-          <Img
-            onClick={() =>
-              scroll.animateScroll.scrollTo(window.innerHeight * 3 - 50)
-            }
-          />
-        </div>
+    <Fade>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "100px",
+          fontSize: "1.5rem"
+        }}
+      >
+        О нас
       </div>
-    </Container>
+      <Container>
+        <div className="calery-page-container column">
+          <SliderComponent duration={2000} infinite autoplay={3000}>
+            {data.map(article => (
+              <div key={article.id} className="who-container">
+                <div className="who-cont">
+                  <div className="message">{article.message}</div>
+                  <div className="who">{article.who}</div>
+                </div>
+              </div>
+            ))}
+          </SliderComponent>
+        </div>
+      </Container>
+      <div className="arrow">
+        <Img
+          onClick={() =>
+            scroll.animateScroll.scrollTo(window.innerHeight * 3 + 100)
+          }
+        />
+      </div>
+    </Fade>
   );
 };

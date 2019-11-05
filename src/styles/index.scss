@@ -122,3 +122,28 @@ code {
   position: absolute;
   margin-top: 380px;
 }
+
+.who-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.who-cont {
+  height: 70%;
+  width: 60%;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+
+  & .message {
+    font-size: 1.5rem;
+    line-height: 50px;
+  }
+
+  & .who {
+    color: #af9352;
+  }
+}
