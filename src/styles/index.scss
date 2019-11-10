@@ -1,0 +1,149 @@
+body {
+  margin: 0;
+  font-family: "Prata", serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100vw;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &-small {
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.card {
+  width: 400px;
+  height: 100%;
+  background: #af9352;
+  color: #fff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+  &.left {
+    height: 90%;
+  }
+
+  &:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  }
+
+  &-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    height: 60%;
+    width: 90%;
+  }
+
+  &-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    height: 70%;
+    text-align: center;
+  }
+
+  &-title {
+    font-size: 3rem;
+    font-weight: 200;
+  }
+
+  &-logo {
+    font-size: 3rem;
+    font-weight: 200;
+  }
+
+  &-message {
+    font-size: 2rem;
+    font-weight: 200;
+  }
+
+  &-btn {
+    outline: none;
+    width: 280px;
+    height: 60px;
+    cursor: pointer;
+    background: none;
+    font-size: 1.5rem;
+    color: #fff;
+    border: 1px solid #fff;
+    transition: all ease-in-out 0.3s;
+
+    &:hover {
+      background: #fff;
+      color: #af9352;
+    }
+  }
+
+  @media (max-width: 700px) {
+    width: 100%;
+  }
+}
+
+.margin-50 {
+  margin-bottom: 100px;
+
+  @media (max-width: 700px) {
+    margin-bottom: -150px;
+  }
+}
+
+.arrow {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 700px) {
+    height: 20%;
+  }
+}
+
+.arrow-bottom {
+  position: absolute;
+  margin-top: 380px;
+}
+
+.who-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.who-cont {
+  height: 70%;
+  width: 60%;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+
+  & .message {
+    font-size: 1.5rem;
+    line-height: 50px;
+  }
+
+  & .who {
+    color: #af9352;
+  }
+}

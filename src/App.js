@@ -1,26 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
+import { useModal } from "./hooks/useModal";
+
+import { Router } from "./router/index";
+
+import { Title, Footer, Sidebar } from "./modules";
+
+export const App = () => {
+  const { open, handleOpen, handleClose } = useModal();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Title setOpen={handleOpen} />
+      <Sidebar open={open} setClose={handleClose} />
+      <Router />
+      <Footer />
+    </>
   );
-}
-
-export default App;
+};
