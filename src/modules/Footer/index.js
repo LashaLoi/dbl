@@ -2,6 +2,8 @@ import React from "react";
 
 import Fade from "react-reveal/Fade";
 
+import { navigate } from "@reach/router";
+
 import { Container } from "../../components/Container";
 
 import { ReactComponent as FacebookIcon } from "../../assets/images/facebook.svg";
@@ -38,7 +40,12 @@ export const Footer = () => (
               <TelegramIcon />
               <VKIcon />
             </div>
-            <button className="footer-btn">Заказать услугу</button>
+            <button
+              className="footer-btn"
+              onClick={() => navigate("/amenities")}
+            >
+              Заказать услугу
+            </button>
           </div>
         </Fade>
       </div>

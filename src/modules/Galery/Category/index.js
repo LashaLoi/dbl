@@ -1,8 +1,6 @@
 import React from "react";
 import uuid from "uuid";
 
-import { Container } from "../../../components/Container";
-
 import { navigate } from "@reach/router";
 
 import Fade from "react-reveal/Fade";
@@ -45,7 +43,7 @@ const content = [
 
 export const Category = () => {
   return (
-    <Container>
+    <div className="category-main">
       <Fade>
         <div className="category">
           {content.map(({ id, title, desc, url, link }) => (
@@ -65,6 +63,6 @@ export const Category = () => {
           ))}
         </div>
       </Fade>
-    </Container>
+    </div>
   );
 };
