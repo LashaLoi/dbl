@@ -7,9 +7,5 @@ export const Contact = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  return (
-    <>
-      <Form />
-    </>
-  );
+  return <Form />;
 };

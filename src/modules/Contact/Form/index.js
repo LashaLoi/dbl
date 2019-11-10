@@ -8,8 +8,6 @@ import CloseIcon from "@material-ui/icons/Close";
 
 import Fade from "react-reveal/Fade";
 
-import { Container } from "../../../components/Container";
-
 import "./index.scss";
 
 const useStyles = makeStyles(theme => ({
@@ -73,7 +71,7 @@ export const Form = () => {
   };
 
   return (
-    <Container>
+    <div className="contuct-main">
       <Fade>
         <div className="contuct-up">
           <div className="contact-card">
@@ -162,6 +160,6 @@ export const Form = () => {
           </IconButton>
         ]}
       />
-    </Container>
+    </div>
   );
 };
