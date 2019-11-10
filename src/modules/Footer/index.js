@@ -38,7 +38,7 @@ export const Footer = () => (
               <TelegramIcon />
               <VKIcon />
             </div>
-            <button className="card-btn">Заказать услугу</button>
+            <button className="footer-btn">Заказать услугу</button>
           </div>
         </Fade>
       </div>
