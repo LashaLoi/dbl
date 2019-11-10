@@ -1,6 +1,7 @@
 import React from "react";
 
 import Fade from "react-reveal/Fade";
+import uuid from "uuid";
 
 import scroll from "react-scroll";
 import SliderComponent from "react-animated-slider";
@@ -14,19 +15,19 @@ import "./index.scss";
 
 const data = [
   {
-    id: Date.now() + Math.random(1000000),
+    id: uuid(),
     who: "Irina loi",
     message:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio perspiciatis laudantium quam commodi voluptatum quasi numquam laboriosam, aut sint quas?"
   },
   {
-    id: Date.now() + Math.random(1000000),
+    id: uuid(),
     who: "Aliaksei loi",
     message:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio perspiciatis laudantium quam commodi voluptatum quasi numquam laboriosam, aut sint quas? adipisicing elit. Optio perspiciatis laudantium quam commodi voluptatum quasi numquam laboriosam, aut sint quas?"
   },
   {
-    id: Date.now() + Math.random(1000000),
+    id: uuid(),
     who: "Sasha Loi",
     message:
       "adipisicing elit. Optio perspiciatis laudantium quam commodi voluptatum quasi numquam laboriosam, aut sint quas?"

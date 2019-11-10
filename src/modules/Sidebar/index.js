@@ -15,6 +15,7 @@ import CloseIcon from "@material-ui/icons/Close";
 import Slide from "@material-ui/core/Slide";
 
 import { makeStyles } from "@material-ui/core/styles";
+import uuid from "uuid";
 
 const useStyles = makeStyles(theme => ({
   appBar: {
@@ -28,11 +29,11 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const links = [
-  { id: 11, name: "Главная", link: () => navigate("/") },
-  { id: 21, name: "Услуги", link: () => navigate("/amenities") },
-  { id: 31, name: "О нас", link: () => navigate("/about") },
-  { id: 41, name: "Галерея", link: () => navigate("/galery") },
-  { id: 234, name: "Контакты", link: () => navigate("/contact") }
+  { id: uuid(), name: "Главная", link: () => navigate("/") },
+  { id: uuid(), name: "Услуги", link: () => navigate("/amenities") },
+  { id: uuid(), name: "О нас", link: () => navigate("/about") },
+  { id: uuid(), name: "Галерея", link: () => navigate("/galery") },
+  { id: uuid(), name: "Контакты", link: () => navigate("/contacts") }
 ];
 
 const Transition = React.forwardRef((props, ref) => (

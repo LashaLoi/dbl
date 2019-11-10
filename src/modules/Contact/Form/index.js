@@ -6,6 +6,8 @@ import Snackbar from "@material-ui/core/Snackbar";
 import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
 
+import Fade from "react-reveal/Fade";
+
 import { Container } from "../../../components/Container";
 
 import "./index.scss";
@@ -72,62 +74,64 @@ export const Form = () => {
 
   return (
     <Container>
-      <div className="contuct-up">
-        <div className="contact-card">
-          <Logo />
-          <div className="contact-card-text">
-            Обращайтесь, чтобы воплотить мечты в жизнь.
-          </div>
-        </div>
-        <div className="form">
-          <form onSubmit={handleSubmit} className="form-container">
-            <div className="form-title">
-              Пожалуйста, заполните форму, и мы свяжемся с вами в ближайшее
-              время.
+      <Fade>
+        <div className="contuct-up">
+          <div className="contact-card">
+            <Logo />
+            <div className="contact-card-text">
+              Обращайтесь, чтобы воплотить мечты в жизнь.
             </div>
-            <div className="form-required-controlls">
+          </div>
+          <div className="form">
+            <form onSubmit={handleSubmit} className="form-container">
+              <div className="form-title">
+                Пожалуйста, заполните форму, и мы свяжемся с вами в ближайшее
+                время.
+              </div>
+              <div className="form-required-controlls">
+                <input
+                  type="text"
+                  className="name"
+                  required
+                  placeholder="Name *"
+                  name="name"
+                  onChange={handleChange}
+                  value={name}
+                />
+                <input
+                  type="email"
+                  className="email"
+                  required
+                  placeholder="Email *"
+                  name="email"
+                  onChange={handleChange}
+                  value={email}
+                />
+              </div>
               <input
                 type="text"
-                className="name"
+                className="phone"
                 required
-                placeholder="Name *"
-                name="name"
+                placeholder="Phone *"
+                name="phone"
                 onChange={handleChange}
-                value={name}
+                value={phone}
               />
-              <input
-                type="email"
-                className="email"
+              <textarea
+                className="message"
                 required
-                placeholder="Email *"
-                name="email"
+                placeholder="Message *"
+                name="message"
                 onChange={handleChange}
-                value={email}
-              />
-            </div>
-            <input
-              type="text"
-              className="phone"
-              required
-              placeholder="Phone *"
-              name="phone"
-              onChange={handleChange}
-              value={phone}
-            />
-            <textarea
-              className="message"
-              required
-              placeholder="Message *"
-              name="message"
-              onChange={handleChange}
-              value={message}
-            ></textarea>
-            <button type="submit" disabled={loading}>
-              {loading ? "Отправка..." : "Отправить"}
-            </button>
-          </form>
+                value={message}
+              ></textarea>
+              <button type="submit" disabled={loading}>
+                {loading ? "Отправка..." : "Отправить"}
+              </button>
+            </form>
+          </div>
         </div>
-      </div>
+      </Fade>
       <Snackbar
         anchorOrigin={{
           vertical: "bottom",

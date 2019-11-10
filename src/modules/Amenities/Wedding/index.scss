@@ -8,7 +8,7 @@
   color: #af9352;
   margin-top: 100px;
 
-  @media (max-width: 1000px) {
+  @media (max-width: 1150px) {
     margin-top: 0;
   }
 
@@ -18,7 +18,7 @@
     height: 80%;
     justify-content: space-between;
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1150px) {
       flex-direction: column;
     }
   }
@@ -50,7 +50,17 @@
       border-radius: 50%;
       margin-bottom: 50px;
 
-      @media (max-width: 1000px) {
+      @media (max-width: 1200px) {
+        height: 70px;
+        width: 70px;
+      }
+
+      @media (max-width: 1400px) {
+        height: 100px;
+        width: 100px;
+      }
+
+      @media (max-width: 1150px) {
         display: none;
       }
     }
@@ -76,7 +86,7 @@
     font-weight: 200;
     text-align: center;
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1150px) {
       font-size: 2rem;
     }
   }

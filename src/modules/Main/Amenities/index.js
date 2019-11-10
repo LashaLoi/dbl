@@ -38,7 +38,7 @@ export const Amenities = () => (
     <div className="arrow-bottom">
       <Img
         onClick={() =>
-          scroll.animateScroll.scrollTo(window.innerHeight * 2 + 20)
+          scroll.animateScroll.scrollTo(window.innerHeight * 2 - 100)
         }
       />
     </div>

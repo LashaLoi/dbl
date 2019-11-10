@@ -23,7 +23,8 @@ const useStyles = makeStyles(theme => ({
   },
   title: {
     flexGrow: 1,
-    color: "#AF9453"
+    color: "#AF9453",
+    cursor: "pointer"
   },
   toolbar: {
     padding: 20,
@@ -47,7 +48,11 @@ export const Title = ({ setOpen }) => {
     <div className={classes.root}>
       <AppBar position="fixed" className={classes.appBar}>
         <Toolbar className={classes.toolbar}>
-          <Typography variant="h6" className={classes.title}>
+          <Typography
+            variant="h6"
+            className={classes.title}
+            onClick={() => navigate("/")}
+          >
             <Logo /> DBL
           </Typography>
           {isTabletOrMobile ? (

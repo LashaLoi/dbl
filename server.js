@@ -3,10 +3,10 @@ const path = require("path");
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
 const dotenv = require("dotenv");
-
 const cors = require("cors");
 
 const app = express();
+const port = 8080;
 
 dotenv.config();
 
@@ -44,4 +44,6 @@ app
   .get("/:route*", (req, res, next) =>
     res.sendFile(path.join(__dirname, "./build", "index.html"))
   )
-  .listen(8080, () => console.log("server was started"));
+  .listen(port, () =>
+    console.log(`Server was started on http://localhost:${port}`)
+  );

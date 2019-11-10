@@ -1,4 +1,5 @@
 import React from "react";
+import uuid from "uuid";
 
 import { Container } from "../../../components/Container";
 
@@ -10,7 +11,7 @@ import "./index.scss";
 
 const content = [
   {
-    id: Date.now() + Math.random(1000000),
+    id: uuid(),
     title: "Some 1",
     desc: "Desc 1",
     url:
@@ -18,7 +19,7 @@ const content = [
     link: "1"
   },
   {
-    id: Date.now() + Math.random(1000000),
+    id: uuid(),
     title: "Some 22",
     desc: "Desc 2",
     url:
@@ -26,7 +27,7 @@ const content = [
     link: "2"
   },
   {
-    id: Date.now() + Math.random(1000000),
+    id: uuid(),
     title: "Some 3",
     desc: "Desc 3",
     url:
@@ -34,7 +35,7 @@ const content = [
     link: "3"
   },
   {
-    id: Date.now() + Math.random(1000000),
+    id: uuid(),
     title: "Some 4",
     desc: "Desc 5",
     url: "https://www.dager.ru/img/budget/budget-svadbi93.jpeg",
