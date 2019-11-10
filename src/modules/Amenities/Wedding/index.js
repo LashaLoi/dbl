@@ -2,12 +2,10 @@ import React from "react";
 
 import Fade from "react-reveal/Fade";
 
-import { Container } from "../../../components/Container";
-
 import "./index.scss";
 
 export const Wedding = ({ items = [], title = "" }) => (
-  <Container>
+  <div className="wedding-body">
     <Fade>
       <div className="wedding">
         <div className="wedding-title">{title}</div>
@@ -26,5 +24,5 @@ export const Wedding = ({ items = [], title = "" }) => (
         </div>
       </div>
     </Fade>
-  </Container>
+  </div>
 );
