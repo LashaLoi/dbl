@@ -35,7 +35,7 @@ export const Amenities = () => (
         <div className="image"></div>
       </div>
     </Fade>
-    <div className="arrow-bottom">
+    <div className="amenities-arrow-bottom">
       <Img
         onClick={() =>
           scroll.animateScroll.scrollTo(window.innerHeight * 2 - 100)

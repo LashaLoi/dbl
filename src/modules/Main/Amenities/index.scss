@@ -21,3 +21,12 @@
     }
   }
 }
+
+.amenities-arrow-bottom {
+  position: absolute;
+  margin-top: 380px;
+
+  @media (max-width: 700px) {
+    margin-top: 250px;
+  }
+}

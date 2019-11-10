@@ -2,6 +2,8 @@ import React from "react";
 
 import Fade from "react-reveal/Fade";
 
+import { navigate } from "@reach/router";
+
 import { Parallax } from "react-parallax";
 
 import { Container } from "../../../components/Container";
@@ -34,7 +36,12 @@ export const Galery = () => {
                     </div>
                     <div className="card-message">Незабываемые впечатления</div>
                   </div>
-                  <button className="card-btn">Подробнее</button>
+                  <button
+                    className="card-btn"
+                    onClick={() => navigate("/galery")}
+                  >
+                    Подробнее
+                  </button>
                 </div>
               </div>
             </Fade>
