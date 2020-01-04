@@ -37,21 +37,10 @@ const data = [
 export const About = () => {
   return (
     <Fade>
-      <div
-        style={{
-          marginTop: 100,
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          height: "100px",
-          fontSize: "2rem"
-        }}
-      >
-        О нас
-      </div>
+      <div className="contact-main">О нас</div>
       <div className="calery-page-container column">
         <SliderComponent
-          duration={2000}
+          duration={3000}
           infinite
           autoplay={3000}
           previousButton={null}
