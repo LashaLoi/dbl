@@ -39,29 +39,35 @@ export const About = () => {
     <Fade>
       <div
         style={{
+          marginTop: 100,
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
           height: "100px",
-          fontSize: "1.5rem"
+          fontSize: "2rem"
         }}
       >
         О нас
       </div>
-      <Container>
-        <div className="calery-page-container column">
-          <SliderComponent duration={2000} infinite autoplay={3000}>
-            {data.map(article => (
-              <div key={article.id} className="who-container">
-                <div className="who-cont">
-                  <div className="message">{article.message}</div>
-                  <div className="who">{article.who}</div>
-                </div>
+      <div className="calery-page-container column">
+        <SliderComponent
+          duration={2000}
+          infinite
+          autoplay={3000}
+          previousButton={null}
+          nextButton={null}
+          touchDisabled
+        >
+          {data.map(article => (
+            <div key={article.id} className="who-container">
+              <div className="who-cont">
+                <div className="message">{article.message}</div>
+                <div className="who">{article.who}</div>
               </div>
-            ))}
-          </SliderComponent>
-        </div>
-      </Container>
+            </div>
+          ))}
+        </SliderComponent>
+      </div>
       <div className="arrow">
         <Img
           onClick={() =>

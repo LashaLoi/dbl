@@ -29,11 +29,31 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const links = [
-  { id: uuid(), name: "Главная", link: () => navigate("/") },
-  { id: uuid(), name: "Услуги", link: () => navigate("/amenities") },
-  { id: uuid(), name: "О нас", link: () => navigate("/about") },
-  { id: uuid(), name: "Галерея", link: () => navigate("/galery") },
-  { id: uuid(), name: "Контакты", link: () => navigate("/contacts") }
+  {
+    id: uuid(),
+    name: "Главная",
+    link: () => navigate("/")
+  },
+  {
+    id: uuid(),
+    name: "Услуги",
+    link: () => navigate("/amenities")
+  },
+  {
+    id: uuid(),
+    name: "О нас",
+    link: () => navigate("/about")
+  },
+  {
+    id: uuid(),
+    name: "Галерея",
+    link: () => navigate("/galery")
+  },
+  {
+    id: uuid(),
+    name: "Контакты",
+    link: () => navigate("/contacts")
+  }
 ];
 
 const Transition = React.forwardRef((props, ref) => (

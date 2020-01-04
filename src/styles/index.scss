@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: "Prata", serif;
+  font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   width: 100vw;
@@ -16,6 +16,10 @@ code {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 850px) {
+    margin-top: -200px;
+  }
 
   &-small {
     height: 40vh;
@@ -158,6 +162,8 @@ code {
   }
 
   & .who {
+    font-size: 1.4rem;
     color: #af9352;
+    font-family: "Pattaya", sans-serif;
   }
 }

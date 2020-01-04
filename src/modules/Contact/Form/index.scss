@@ -12,6 +12,10 @@
     margin-bottom: 0px;
   }
 
+  input {
+    margin: 10px 0;
+  }
+
   .form-container {
     display: flex;
     justify-content: space-around;
@@ -21,7 +25,6 @@
   }
 
   &-title {
-    margin-top: 100px;
     color: #af9352;
     line-height: 50px;
     font-size: 1.5rem;
@@ -49,10 +52,6 @@
     align-items: center;
     margin-bottom: -40px;
 
-    @media (max-width: 800px) {
-      flex-direction: column;
-    }
-
     input {
       width: 45%;
       font-size: 1.3rem;
@@ -62,10 +61,6 @@
       border-bottom: 2px solid #af9352;
       outline: none;
       height: 40px;
-
-      @media (max-width: 800px) {
-        width: 100%;
-      }
 
       &::placeholder {
         padding-left: 5px;
@@ -173,4 +168,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 600px) {
+    margin-top: -70px;
+  }
 }
