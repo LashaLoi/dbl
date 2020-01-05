@@ -10,15 +10,12 @@ export const Wedding = ({ items = [], title = "" }) => (
       <div className="wedding">
         <div className="wedding-title">{title}</div>
         <div className="wedding-cards">
-          {items.map(({ key, title, message }) => (
+          {items.map(({ key, title, message, price = 100, src }) => (
             <div className="wedding-card" key={key}>
-              <div className="wedding-container">
-                <div className="card-image"></div>
-                <div className="card-body">
-                  <div className="card-title">{title}</div>
-                  <div className="card-message">{message}</div>
-                </div>
-              </div>
+              <img src={src} className="card-image" alt="something" />
+              <div className="card-title">{title}</div>
+              <div className="card-message-1">{message}</div>
+              <div className="card-price">{price}$</div>
             </div>
           ))}
         </div>
