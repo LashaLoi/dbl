@@ -4,18 +4,18 @@
   height: 70%;
   width: 90%;
 
-  @media (max-width: 800px) {
+  @media (max-width: 850px) {
     width: 100%;
     flex-direction: column;
   }
 
   .image {
     width: calc(100% - 500px);
-    background: url(https://svadebka.ws/images/article/191.550x355.1405870096.jpg);
+    background: url(../../../assets/images/Б2.jpg);
     background-position: center;
     background-size: cover;
 
-    @media (max-width: 800px) {
+    @media (max-width: 850px) {
       width: 100%;
       height: 100px;
     }

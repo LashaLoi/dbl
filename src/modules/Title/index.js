@@ -29,13 +29,19 @@ const useStyles = makeStyles(theme => ({
   toolbar: {
     padding: 20,
     margin: "0 5%",
-    color: "#AF9453"
+    color: "#000"
   },
   appBar: {
     background: "#fff"
   },
   link: {
-    cursor: "pointer"
+    fontSize: "1.3rem",
+    cursor: "pointer",
+    transition: ".2s all ease-in-out",
+    textDecoration: "none !important",
+    "&:hover": {
+      color: "#999"
+    }
   }
 }));
 
@@ -53,7 +59,7 @@ export const Title = ({ setOpen }) => {
             className={classes.title}
             onClick={() => navigate("/")}
           >
-            <Logo /> DBL
+            <Logo />
           </Typography>
           {isTabletOrMobile ? (
             <IconButton color="inherit">

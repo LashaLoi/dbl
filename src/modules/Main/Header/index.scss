@@ -1,5 +1,5 @@
 .header {
-  height: 100vh;
+  height: 800px;
 
   &-container {
     color: #fff;
@@ -19,4 +19,11 @@
       width: 300px;
     }
   }
+}
+
+.bg-header {
+  background: url(../../../assets/images/M&D.jpg) top;
+  background-size: cover;
+  width: 86%;
+  margin: 100px 7% 0 7%;
 }

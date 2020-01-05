@@ -20,7 +20,8 @@ import uuid from "uuid";
 const useStyles = makeStyles(theme => ({
   appBar: {
     position: "relative",
-    color: "#fff"
+    color: "#fff",
+    background: "#1e2126"
   },
   title: {
     marginLeft: theme.spacing(3),

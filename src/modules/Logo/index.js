@@ -1,5 +1,6 @@
 import React from "react";
+import LogoImage from "../../assets/images/logo_DBL.png";
 
-import Style from "@material-ui/icons/Style";
+import "./index.scss";
 
-export const Logo = () => <Style />;
+export const Logo = () => <img className="logo" src={LogoImage} alt="logo" />;
