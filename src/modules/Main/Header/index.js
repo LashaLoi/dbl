@@ -14,7 +14,13 @@ export const Header = () => {
   );
 
   return (
-    <div className="bg-header">
+    <div
+      style={{
+        marginTop: "100px",
+        background: `url(${require("../../../assets/images/M&D.jpg")})`,
+        backgroundSize: "cover"
+      }}
+    >
       <div className="header">
         <div className="header-container">
           <Fade>
