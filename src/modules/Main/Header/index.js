@@ -17,7 +17,7 @@ export const Header = () => {
     <div
       style={{
         marginTop: "100px",
-        background: `url(${require("../../../assets/images/M&D.jpg")})`,
+        background: `url(${require("../../../assets/images/MD.jpg")})`,
         backgroundSize: "cover"
       }}
     >
