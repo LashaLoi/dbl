@@ -1,14 +1,7 @@
 import React from "react";
 import { Router as RouterComponent } from "@reach/router";
 
-import {
-  Main,
-  Amenities,
-  About,
-  Galery,
-  GaleryAbout,
-  Contact
-} from "../modules";
+import { Main, Amenities, About, Galery, Contact } from "../modules";
 
 export const Router = () => (
   <RouterComponent>
@@ -16,7 +9,6 @@ export const Router = () => (
     <Amenities path="/amenities" />
     <About path="/about" />
     <Galery path="/galery" />
-    <GaleryAbout path="/galery/:id" />
     <Contact path="/contacts" />
   </RouterComponent>
 );
