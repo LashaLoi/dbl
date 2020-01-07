@@ -71,7 +71,7 @@ export const Form = () => {
   };
 
   return (
-    <div className="contuct-main">
+    <>
       <Fade>
         <div className="contuct-up">
           <div className="contact-card">
@@ -86,29 +86,27 @@ export const Form = () => {
                 Пожалуйста, заполните форму, и мы свяжемся с вами в ближайшее
                 время.
               </div>
-              <div className="form-required-controlls">
-                <input
-                  type="text"
-                  className="name"
-                  required
-                  placeholder="Name *"
-                  name="name"
-                  onChange={handleChange}
-                  value={name}
-                />
-                <input
-                  type="email"
-                  className="email"
-                  required
-                  placeholder="Email *"
-                  name="email"
-                  onChange={handleChange}
-                  value={email}
-                />
-              </div>
               <input
                 type="text"
-                className="phone"
+                className="control"
+                required
+                placeholder="Name *"
+                name="name"
+                onChange={handleChange}
+                value={name}
+              />
+              <input
+                type="email"
+                className="control"
+                required
+                placeholder="Email *"
+                name="email"
+                onChange={handleChange}
+                value={email}
+              />
+              <input
+                type="text"
+                className="control"
                 required
                 placeholder="Phone *"
                 name="phone"
@@ -122,7 +120,7 @@ export const Form = () => {
                 name="message"
                 onChange={handleChange}
                 value={message}
-              ></textarea>
+              />
               <button type="submit" disabled={loading}>
                 {loading ? "Отправка..." : "Отправить"}
               </button>
@@ -160,6 +158,6 @@ export const Form = () => {
           </IconButton>
         ]}
       />
-    </div>
+    </>
   );
 };
