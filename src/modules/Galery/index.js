@@ -8,8 +8,6 @@ import { images } from "./images";
 
 import "./index.scss";
 
-// console.log(images);
-
 export const Galery = () => {
   const [{ toggler, current }, setState] = useState({
     toggler: false,
