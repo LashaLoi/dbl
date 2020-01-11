@@ -238,6 +238,9 @@ export const Amenities = () => {
           </div>
         </Fade>
       </div>
+      <h2 className="mark">
+        Цены могут меняться в зависимости от условия заказа
+      </h2>
     </>
   );
 };
