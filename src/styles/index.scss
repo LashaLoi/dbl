@@ -41,6 +41,17 @@ code {
   align-items: center;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 
+  @media (max-width: 850px) {
+    width: 100%;
+  }
+
+  &:last-child {
+    @media (max-width: 850px) {
+      width: 100%;
+      background: rgba(0, 0, 0, 0.7);
+    }
+  }
+
   &.left {
     height: 90%;
   }
@@ -108,10 +119,6 @@ code {
       margin-top: 50px;
       font-size: 1rem;
     }
-  }
-
-  @media (max-width: 850px) {
-    width: 100%;
   }
 }
 
