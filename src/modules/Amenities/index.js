@@ -64,7 +64,7 @@ export const Amenities = () => {
               </div>
               <div className="wedding-card">
                 <img
-                  src={require("../../assets/images/sascheka_163.jpg")}
+                  src={require("../../assets/images/sascheka_163.png")}
                   className="card-image"
                   alt="something"
                 />
@@ -100,7 +100,7 @@ export const Amenities = () => {
             <div className="wedding-cards">
               <div className="wedding-card">
                 <img
-                  src={require("../../assets/images/M&D - 550.jpg")}
+                  src={require("../../assets/images/M&D - 550.png")}
                   className="card-image"
                   alt="something"
                 />
@@ -116,7 +116,7 @@ export const Amenities = () => {
               </div>
               <div className="wedding-card">
                 <img
-                  src={require("../../assets/images/M&D - 537.jpg")}
+                  src={require("../../assets/images/M&D - 537.png")}
                   className="card-image"
                   alt="something"
                 />
@@ -157,7 +157,7 @@ export const Amenities = () => {
             <div className="wedding-cards">
               <div className="wedding-card">
                 <img
-                  src={require("../../assets/images/M&D - 612.jpg")}
+                  src={require("../../assets/images/M&D - 612.png")}
                   className="card-image"
                   alt="something"
                 />
@@ -210,7 +210,7 @@ export const Amenities = () => {
               </div>
               <div className="wedding-card">
                 <img
-                  src={require("../../assets/images/M&D - 590.jpg")}
+                  src={require("../../assets/images/M&D - 590.png")}
                   className="card-image"
                   alt="something"
                 />
